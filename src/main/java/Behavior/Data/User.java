@@ -22,6 +22,10 @@ public class User {
         return email;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String creationString() {
         return "{\n" +
                 "\"name\":\""+ this.name +"\",\n" +

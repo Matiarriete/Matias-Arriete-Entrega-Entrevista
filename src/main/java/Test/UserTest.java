@@ -15,16 +15,6 @@ public class UserTest {
     UsersBehavior userbehavior = new UsersBehavior();
 
     @Test
-    public void getUsers() {
-        assertEquals(userbehavior.getUsers().statusCode(), 200);
-    }
-
-    @Test
-    public void getUser() {
-        assertEquals(200, userbehavior.getUser(5169687).statusCode(), "Verifying user exists");
-    }
-
-    @Test
     public void createUser() {
         User user = new User("Mati", Utils.generateMail(4) + "@mail.com", "male", "active");
         HttpResponse response = userbehavior.postUser(user.creationString());

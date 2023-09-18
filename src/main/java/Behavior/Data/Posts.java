@@ -51,9 +51,8 @@ public class Posts {
     @Override
     public String toString() {
         return "{\n" +
-                "user_id=\"" + user_id +
-                "\",\ntitle=\"" + title + '\"' +
-                ",\nbody=\"" + body + '\"' +
+                "\"title\": \"" + title + '\"' +
+                ",\n\"body\": \"" + body + '\"' +
                 "\n }";
     }
 }

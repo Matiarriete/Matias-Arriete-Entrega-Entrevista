@@ -31,10 +31,10 @@ public class PostRequest {
 
         client = HttpClient.newHttpClient();
         request = HttpRequest.newBuilder()
-                .POST(HttpRequest.BodyPublishers.ofString(body))
                 .uri(URI.create("https://gorest.co.in/public/v2/users/" + id + "/posts"))
                 .setHeader("Content-Type", "application/json")
                 .setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + ACCESS_TOKEN)
+                .POST(HttpRequest.BodyPublishers.ofString(body))
                 .build();
         try {
             return client.send(request, HttpResponse.BodyHandlers.ofString());
